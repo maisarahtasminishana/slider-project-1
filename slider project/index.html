@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+ 
+ <section>
+  <h1>Food Items</h1>
+    <img class="myslides" src="istockphoto-465529983-612x612.jpg" height="300" width="300" >
+    <img class="myslides" src="recipe-image-legacy-id-560491_11-8342908.jpg" height="300" width="300" >
+    <img class="myslides" src="pouring-honey-on-pancakes.webp" height="300" width="300" >
+    
+  </section>
+  
+<script>
+var myIndex = 0
+function carousel() {
+ var i ;
+ var x = document.getElementsByClassName("myslides");
+ for (i = 0; i < x.length; i++) {
+  x[i].style.display = "none";
+ }
+ myIndex++
+ if(myIndex > x.length) {myIndex = 1}
+ x[myIndex-1].style.display = "block";
+ setTimeout(carousel, 3000);
+}
+carousel(); 
+</script>
+</body>
+</html>
